@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="PT-BR" ng-app="blog">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ribeiro's Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="Angélica Ribeiro Muniz" content="Blog Pessoal"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div  class="col-md-6">
+                        <img id="logo" src="./assets/LOGO.png" alt="">
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <ul>
+                            <li class="nav-item"><a href="#"><u>Início</u></a></li>
+                            <li class="nav-item"><a href="#">Jogos</a></li>
+                            <li class="nav-item"><a href="#">Receitas</a></li>
+                            <li id="Contato" class="nav-item"><a href="#footer">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button style="color: black; background-color: white; border: none; box-shadow: none;" class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        ☰
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">Inicio</button></li>
+                      <li><button class="dropdown-item" type="button">Receitas</button></li>
+                      <li><button class="dropdown-item" type="button">Jogos</button></li>
+                    </ul>
+                  </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <main>
+        <div id="biografia" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                     <img class="img-fluid" id="perfil" src="./assets/PERFIL.png" alt="">
+                </div>
+            </div>
+            <div id="textBio" class="row">
+                <p class="col-md-12"> <p><h4>BEM VINDO AO MEU BLOG!</h4></p> Me chamo Angélica Ribeiro Muniz e tenho 17 anos. Aqui no meu blog te ajudo a fazer códigos e receitas, além de disponibilizar links de acesso a jogos pagos gratuitamente e te fornecer noticias quentinhas. </p>
+            </div>
+        </div>
+    </main>
+
+    <div class="album bg-light">
+        <div class="container">
+         <div class="row" ng-controller="Rest">
+            <div class="col-4" ng-repeat="publicacao in publicacoes">
+              <div class="card shadow-sm">
+                <img ng-src="{{ publicacao.thumbImage }}" >
+                <div class="card-body">
+                  <p class="card-text">{{ publicacao.title }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">{{ publicacao.description }}</small>
+                  </div>
+                  <div class="button"><a href="acesso.html">Ver mais</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer id="footer">
+        <div class="row">
+            <h4 class=".col-md-12">REDES SOCIAIS</h4>
+        <div class="row">
+        <div class="row">
+            <a href="https://github.com/ribeiroamuniz"><img id="github" class="img-fluid col-md-12" src="./assets/github.png" alt=""></a>
+        </div>
+        <div class="row">
+            <p id="licença"><p id="info">Info • Suport • Marketing</p><p id="termo">Termo of Use • Privacy Policy<p/><p id="doismilevintequatro" >© 2024 amuniz, Inc.</p>
+        </div>
+    </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-mrcAsJ0hCO3K3cy3BEikt7HfKb6T5tFt4h7QA7i/b2m8g0HUG8jN1q5P0yCUF7Bf" crossorigin="anonymous"></script>
+    
+</body>
+
+
+
+</html>
+      
+    <footer id="footer">
+
+    </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-mrcAsJ0hCO3K3cy3BEikt7HfKb6T5tFt4h7QA7i/b2m8g0HUG8jN1q5P0yCUF7Bf" crossorigin="anonymous"></script>
+    
+</body>
+
+
+</html>
